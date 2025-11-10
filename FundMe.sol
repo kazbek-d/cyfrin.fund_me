@@ -3,6 +3,8 @@ pragma solidity ^0.8.24;
 
 import {PriceConverter} from "./PriceConverter.sol";
 
+error NotOwner();
+
 // Get funds from users
 // Withdraw funds
 // Set minimum funds value in USD
@@ -83,7 +85,10 @@ contract FundMe {
     }
 
     modifier onlyOwner() {
-        require(msg.sender == i_owner, "Sender is not the owner");        
+        // require(msg.sender == i_owner, "Sender is not the owner");
+        if(msg.sender != i_owner) {
+            revert NotOwner();
+        }
         _;
     }
 
