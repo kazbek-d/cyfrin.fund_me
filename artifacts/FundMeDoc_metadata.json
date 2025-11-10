@@ -26,7 +26,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"FundMeDoc.sol": "FundMeDoc"
+			"contracts/FundMeDoc.sol": "FundMeDoc"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -40,7 +40,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"FundMeDoc.sol": {
+		"contracts/FundMeDoc.sol": {
 			"keccak256": "0xe17c4abee656947db690aeda2f09075441dc6ffb0f574cc37538f0fa718fd2a7",
 			"license": "MIT",
 			"urls": [

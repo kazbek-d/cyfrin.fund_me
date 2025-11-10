@@ -40,7 +40,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"FallbackExample.sol": "FallbackExample"
+			"contracts/FallbackExample.sol": "FallbackExample"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -54,7 +54,7 @@
 		"remappings": []
 	},
 	"sources": {
-		"FallbackExample.sol": {
+		"contracts/FallbackExample.sol": {
 			"keccak256": "0x30c32aa28939b7389a8b032c285cfc81ec76c76b57142182900b753ddb97af4a",
 			"license": "MIT",
 			"urls": [

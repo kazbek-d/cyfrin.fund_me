@@ -115,7 +115,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/FundMe.sol": "FundMe"
+			"contracts/FundMeZKSync.sol": "FundMeZKSync"
 		},
 		"evmVersion": "shanghai",
 		"libraries": {},
@@ -137,20 +137,12 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"contracts/FundMe.sol": {
-			"keccak256": "0xeb9beed1662b8030479c40ae52650a3989a99e94be9a84d8af1d356cafcbed4f",
+		"contracts/FundMeZKSync.sol": {
+			"keccak256": "0xdbd29581f1ba0dfd4f2f2e8b75a4a9a45794b6edc00c25aaea891fdb8aa99389",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e0513ace77357166d3bf98edf61eeba7b8b62f76b5514c330bb8370613aef84d",
-				"dweb:/ipfs/QmR5aa8tMCq2ct76vsjBRrM1tSpXoWX19J4sFoUPeeE5kR"
-			]
-		},
-		"contracts/PriceConverter.sol": {
-			"keccak256": "0x7ee3c0386c5087496d90c4356c87c9d8eb2789e585d45178accb2fd5c4815880",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://fd4c9265986dda6df2d4b301d7012cd3347fd4e63b8366ae086df5a29b11389f",
-				"dweb:/ipfs/QmNgWXDEQWpvrqL3yPGbZyFd1bPpMQ4ktKZpt41G1EBjBv"
+				"bzz-raw://8adf0a5a100b2d3b1236539ce23291de1d7d8782e53f500485ca6c3691473808",
+				"dweb:/ipfs/QmbGV5ZUvMjXmauWiH9oubRpnkqq4RCoMgkeBgcK9gisuH"
 			]
 		}
 	},

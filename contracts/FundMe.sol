@@ -26,17 +26,23 @@ contract FundMe {
      * Aggregator: ETH/USD
      * Address: 0x694AA1769357215DE4FAC081bf1f309aDC325306
      */
-    address internal priceFeedAddress;
+
+    // https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=1&network=zksync&networkType=testnet&search=&testnetSearch=
+    /**
+     * Network: ZKsync Sepolia testnet
+     * Aggregator: ETH/USD
+     * Address: 0xfEefF7c3fB57d18C5C6Cdd71e45D2D0b4F9377bF
+     */
+    address constant PRICE_FEED_ADDRESS = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
 
     constructor() {
-        priceFeedAddress = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
         i_owner = msg.sender;
     }
 
     // Allow users to send $
     // Have a minimum $ to sent
     function fund() public payable {
-        require(msg.value.getConversionRate(priceFeedAddress) >= MINIMUM_USD, "didn't send enough ETH"); 
+        require(msg.value.getConversionRate(PRICE_FEED_ADDRESS) >= MINIMUM_USD, "didn't send enough ETH"); 
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
     }
