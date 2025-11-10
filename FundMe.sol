@@ -11,12 +11,12 @@ contract FundMe {
     using PriceConverter for uint256;
 
     // 5 USD => 5e18 because of presigion
-    uint256 public minimumUsd = 5e18; 
+    uint256 public constant MINIMUM_USD = 5e18; 
 
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
-    address public owner;
+    address public immutable i_owner;
 
     // https://docs.chain.link/data-feeds/price-feeds/addresses?page=1&testnetPage=1&networkType=testnet&search=&testnetSearch=
     /**
@@ -28,13 +28,13 @@ contract FundMe {
 
     constructor() {
         priceFeedAddress = 0x694AA1769357215DE4FAC081bf1f309aDC325306;
-        owner = msg.sender;
+        i_owner = msg.sender;
     }
 
     // Allow users to send $
     // Have a minimum $ to sent
     function fund() public payable {
-        require(msg.value.getConversionRate(priceFeedAddress) >= minimumUsd, "didn't send enough ETH"); 
+        require(msg.value.getConversionRate(priceFeedAddress) >= MINIMUM_USD, "didn't send enough ETH"); 
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
     }
@@ -83,7 +83,7 @@ contract FundMe {
     }
 
     modifier onlyOwner() {
-        require(msg.sender == owner, "Sender is not the owner");        
+        require(msg.sender == i_owner, "Sender is not the owner");        
         _;
     }
 
